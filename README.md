@@ -24,7 +24,7 @@ point for writing your own.  Use the following command to execute the
 tests using Maven:
 
 ```
-$ ./mvnw testf
+$ ./mvnw test
 ```
 
 ---
