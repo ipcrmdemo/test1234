@@ -5,7 +5,7 @@ chmod 755 /usr/local/bin/dumb-init
 
 MAINTAINER Atomist <docker@atomist.com>
 
-RUN mkdir -p /opt/app
+RUN mkdir -p /opt/app /opt/app1
 
 WORKDIR /opt/app
 
