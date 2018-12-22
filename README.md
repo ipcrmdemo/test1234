@@ -5,7 +5,7 @@ Based on seed project `atomist-seeds:spring-rest-seed`
 
 ## Development
 
-This project is driven using [Maven][mvn].
+This project is driven using [Maven][mfvn].
 
 [mvn]: https://maven.apache.org/ (Maven)
 
