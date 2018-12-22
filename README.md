@@ -4,7 +4,7 @@ my new project..
 Based on seed project `atomist-seeds:spring-rest-seed`
 f
 
-This project is driven using [Maven][mfvn].
+This project is driven using [Maven][mfvn].f
 
 [mvn]: https://maven.apache.org/ (Maven)
 
