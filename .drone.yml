@@ -1,12 +1,11 @@
 pipeline:
   install-and-build:
-    image: node:10
+    image: 'openjdk:10-alpine'
     pull: true
     commands:
       - npm install
       - npm run build
       - npm run test
-
   ecr:
     image: foo
     region:
@@ -17,15 +16,14 @@ pipeline:
     dockerfile: Dockerfile
     tag:
       - latest
-      - 1.0.${DRONE_BUILD_NUMBER}
+      - '1.0.${DRONE_BUILD_NUMBER}'
     build_args:
-      - BUILD_NUMBER=1.0.${DRONE_BUILD_NUMBER}
-      - VCS_REF=${DRONE_COMMIT}
+      - 'BUILD_NUMBER=1.0.${DRONE_BUILD_NUMBER}'
+      - 'VCS_REF=${DRONE_COMMIT}'
     when:
       branch: master
       event:
         exclude: pull_request
-
   sandbox:
     image: foo
     pull: true
@@ -34,7 +32,7 @@ pipeline:
     custom_parameters:
       min_replicas: 1
       max_replicas: 1
-      tag: 1.0.${DRONE_BUILD_NUMBER}
+      tag: '1.0.${DRONE_BUILD_NUMBER}'
     when:
       branch: master
       event:
